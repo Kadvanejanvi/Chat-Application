@@ -15,6 +15,11 @@ const PORT = process.env.PORT || 3000
 app.get("/", (req, res) => {
     res.send("hello world")
 })
+
+//import routes
+import authRouters from "./routes/auth.rouths.js"
+app.use("/api/auth",authRouters)
+
 app.listen(PORT, () => {
     console.log("server is running at 3000"+ PORT);
 })
